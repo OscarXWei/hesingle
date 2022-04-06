@@ -32,6 +32,7 @@ engine:
     - table_translator@custom_phraseBQ  # 简字补全码表，由于不需要词组输入，默认开启
     - table_translator@custom_phraseCN  # 用户自用码表（文本转换），默认开启
     #- table_translator@custom_phraseFE # 生僻字补全码表,默认关闭
+    #- table_translator@custom_phraseSC # 最常用331个二字词简拼码表,默认关闭(熟练后可开启)
     - lua_translator@lunar_translator
     - lua_translator@alltime_translator
   
@@ -122,6 +123,15 @@ custom_phraseFE:
   enable_sentence: false
   enable_completion: false
   initial_quality: -2 #和系统词重码时居后
+  
+  
+ custom_phraseSC:
+  dictionary: ""
+  user_dict: flypy_scow
+  db_class: stabledb
+  enable_sentence: false
+  enable_completion: false
+  initial_quality: 1 #和系统词重码时居前
 
 recognizer:
   import_preset: default

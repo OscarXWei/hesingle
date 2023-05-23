@@ -124,8 +124,7 @@ custom_phraseFE:
   enable_completion: false
   initial_quality: -2 #和系统词重码时居后
   
-  
- custom_phraseSC:
+custom_phraseSC:
   dictionary: ""
   user_dict: flypy_scow
   db_class: stabledb
